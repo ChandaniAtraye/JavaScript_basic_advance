@@ -139,3 +139,31 @@ const counter = outer();
   let twenty = discountCalculator(20);
   console.log(ten(1200));
   console.log(twenty(2400));
+
+  //Q14. Build a counter using closure
+  function counter1(){
+    let count = 0;
+    return function(){
+       count++;
+       return count;
+    };
+  }
+
+  let c = counter1();
+  console.log(c());
+  console.log(c());
+ 
+
+  //Q15. create a pure function to transform  a value 
+  function double(val){
+        return val * 2;
+  }
+  console.log(double(5));
+
+  //Q16. Use IIFE to isolate variables / private vaiable create kar skte 
+  (function() {
+    const password = "secret password";
+    console.log(password);
+
+  })();
+   console.log(password);
